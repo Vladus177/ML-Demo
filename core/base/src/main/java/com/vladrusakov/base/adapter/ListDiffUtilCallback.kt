@@ -15,11 +15,11 @@ class ListDiffUtilCallback (
 
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
         return try {
-            val newItem: String? =
+            val newItem: String =
                 oldItems[oldItemPosition].javaClass.getDeclaredField(fieldName).toString()
-            val oldItem: String? =
+            val oldItem: String =
                 oldItems[oldItemPosition].javaClass.getDeclaredField(fieldName).toString()
-            newItem?.isNotEmpty() == oldItem?.isNotEmpty()
+            newItem.isNotEmpty() == oldItem.isNotEmpty()
         } catch (e: Exception) {
             false
         }
