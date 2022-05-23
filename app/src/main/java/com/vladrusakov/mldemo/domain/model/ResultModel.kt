@@ -1,0 +1,30 @@
+package com.vladrusakov.mldemo.domain.model
+
+data class ResultModel(
+    val id: String,
+    val siteId: String,
+    val title: String,
+    val seller: SellerModel,
+    val price: Double,
+    val currencyId: String,
+    val availableQuantity: Long,
+    val soldQuantity: Long,
+    val buyingMode: String,
+    val listingTypeId: String,
+    val stopTime: String,
+    val condition: String,
+    val permalink: String,
+    val thumbnail: String,
+    val acceptsMercadopago: Boolean,
+    val installments: InstallmentModel,
+    val address: AddressModel,
+    val shipping: ShippingModel,
+    val sellerAddress: SellerAddressModel,
+    val attributes: List<AttributeModel>,
+    val originalPrice: Double,
+    val categoryId: String,
+    val officialStoreId: Long,
+    val catalogProductId: String,
+    val tags: List<String>,
+    val catalogListing: Boolean
+)

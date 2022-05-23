@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_nav_graph"
+    app:startDestination="@id/searchItems">
+
+    <fragment
+        android:id="@+id/searchItems"
+        android:name="com.vladrusakov.mldemo.presentation.itemssearch.ItemsSearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search_items">
+        <action
+            android:id="@+id/searchToList"
+            app:destination="@id/itemsList"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/searchToDetail"
+            app:destination="@id/itemDetail"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemsList"
+        android:name="com.vladrusakov.mldemo.presentation.itemslist.ItemsListFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_items_list">
+        <action
+            android:id="@+id/listToDetail"
+            app:destination="@id/itemDetail"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="query"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemDetail"
+        android:name="com.vladrusakov.mldemo.presentation.itemdetail.ItemDetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_item_detail">
+        <argument
+            android:name="itemUrl"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

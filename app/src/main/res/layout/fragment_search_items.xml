@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_last_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_large"
+        android:layout_marginTop="@dimen/space_extra_large"
+        android:layout_marginEnd="@dimen/space_large"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:elevation="@dimen/cardview_default_elevation"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_empty_last_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_small"
+                android:layout_marginTop="@dimen/space_small"
+                android:layout_marginEnd="@dimen/space_small"
+                android:gravity="start"
+                android:textSize="@dimen/material_text_body"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/last_search" />
+
+            <RelativeLayout
+                android:id="@+id/ll_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_product"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="start"
+                    android:layout_margin="@dimen/space_small"
+                    android:adjustViewBounds="true"
+                    tools:ignore="contentDescription" />
+
+                <TextView
+                    android:id="@+id/tv_product_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/space_small"
+                    android:layout_toEndOf="@+id/iv_product"
+                    android:maxLines="3"
+                    android:textSize="@dimen/material_text_body"
+                    tools:text="Pantalla Compatible Motorola Moto G7 Completa LCD" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

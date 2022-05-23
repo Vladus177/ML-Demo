@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Ml demo</string>
+    <string name="search_in_ml" tools:ignore="ExtraTranslation">Buscar en Mercado Libre</string>
+    <string name="publications_not_found" tools:ignore="ExtraTranslation">No encontramos publicaciones</string>
+    <string name="check_input" tools:ignore="ExtraTranslation">Revisa que la palabra esté bien escrita</string>
+    <string name="looks_like_connection_error" tools:ignore="ExtraTranslation">¡Parece que no hay internet!</string>
+    <string name="check_your_connection" tools:ignore="ExtraTranslation">Revisa tu conexión para seguir navegando</string>
+    <string name="try_again" tools:ignore="ExtraTranslation">Reintentar</string>
+    <string name="free_shipping" tools:ignore="ExtraTranslation">Envio gratis</string>
+    <string name="generic_error">Se ha producido un error, intenta nuevamente</string>
+    <string name="promoted" tools:ignore="ExtraTranslation">Promocionado</string>
+    <string name="last_search" tools:ignore="ExtraTranslation">Visto recientemente</string>
+</resources>
